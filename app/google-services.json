@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "991212989954",
+    "project_id": "health-cheaker",
+    "storage_bucket": "health-cheaker.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:991212989954:android:9ace9e8f7068a5ab5ec11b",
+        "android_client_info": {
+          "package_name": "mmu.edu.my.assignment"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "991212989954-tin07jd7ukmcgr5ri26vcfn1mfh0kenk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAVmeZ1Dt6iDMGL9yqdyt_I8Yb1BJpL0NI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "991212989954-tin07jd7ukmcgr5ri26vcfn1mfh0kenk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:991212989954:android:1aa1833b427c99ab5ec11b",
+        "android_client_info": {
+          "package_name": "mmu.edu.my.healthchecker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "991212989954-tin07jd7ukmcgr5ri26vcfn1mfh0kenk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAVmeZ1Dt6iDMGL9yqdyt_I8Yb1BJpL0NI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "991212989954-tin07jd7ukmcgr5ri26vcfn1mfh0kenk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
