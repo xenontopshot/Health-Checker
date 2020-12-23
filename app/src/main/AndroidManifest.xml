@@ -11,18 +11,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.HealthChecker">
-        <activity android:name=".tracker"></activity>
-        <activity android:name=".symptomp" />
-        <activity android:name=".hospital" />
-        <activity android:name=".Login" />
-        <activity android:name=".MainActivity"
-            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"/>
-        <activity android:name=".SignUp">
+        <activity android:name=".splashscreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".tracker"
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".symptomp"
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".hospital"
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".Login" />
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+        <activity android:name=".SignUp">
         </activity>
     </application>
 
