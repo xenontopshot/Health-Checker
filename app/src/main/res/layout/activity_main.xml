@@ -17,10 +17,10 @@
         android:textAppearance="@style/april_2020_"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.892"
+        app:layout_constraintHorizontal_bias="0.925"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/background_"
-        app:layout_constraintVertical_bias="0.07" />
+        app:layout_constraintVertical_bias="0.043" />
 
     <TextView
         android:id="@+id/health_trac"
@@ -33,43 +33,28 @@
         android:textAppearance="@style/health_trac"
         app:layout_constraintBottom_toBottomOf="@+id/bottom_navb"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.095"
+        app:layout_constraintHorizontal_bias="0.068"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/card_jadipa"
-        app:layout_constraintVertical_bias="0.033" />
-
-    <View
-        android:id="@+id/btn_refresh"
-        android:layout_width="70dp"
-        android:layout_height="75dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:background="@drawable/refresh"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="@+id/bottom_navb"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.902" />
+        app:layout_constraintVertical_bias="0.022" />
 
     <View
         android:id="@+id/card_jadipa"
-        android:layout_width="369dp"
-        android:layout_height="133dp"
+        android:layout_width="357dp"
+        android:layout_height="124dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:background="@drawable/gambar"
         app:layout_constraintBottom_toTopOf="@+id/bottom_navb"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.666"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView5"
         app:layout_constraintVertical_bias="0.0" />
 
     <View
         android:id="@+id/background_"
-        android:layout_width="410dp"
-        android:layout_height="152dp"
+        android:layout_width="421dp"
+        android:layout_height="133dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:background="@drawable/header"
@@ -92,10 +77,10 @@
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.06"
+        app:layout_constraintHorizontal_bias="0.054"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.235" />
+        app:layout_constraintTop_toBottomOf="@+id/background_"
+        app:layout_constraintVertical_bias="0.016" />
 
     <Button
         android:id="@+id/button"
@@ -116,10 +101,10 @@
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.313"
+        app:layout_constraintHorizontal_bias="0.246"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.111"
+        app:layout_constraintVertical_bias="0.084"
         app:srcCompat="@drawable/kotak" />
 
     <ImageView
@@ -128,10 +113,10 @@
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="@+id/bottom_navb"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.958"
+        app:layout_constraintHorizontal_bias="0.956"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/background_"
-        app:layout_constraintVertical_bias="0.042"
+        app:layout_constraintVertical_bias="0.02"
         app:srcCompat="@drawable/notif" />
 
     <View
@@ -152,10 +137,10 @@
         android:id="@+id/kasus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="56dp"
         android:layout_marginEnd="4dp"
         app:layout_constraintEnd_toStartOf="@+id/imageView5"
-        app:layout_constraintHorizontal_bias="0.577"
+        app:layout_constraintHorizontal_bias="0.473"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/background_"
         app:srcCompat="@drawable/kasus" />
@@ -164,8 +149,8 @@
         android:id="@+id/imageView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="24dp"
         app:layout_constraintEnd_toStartOf="@+id/imageView6"
         app:layout_constraintTop_toBottomOf="@+id/background_"
         app:srcCompat="@drawable/healed" />
@@ -174,8 +159,8 @@
         android:id="@+id/imageView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/background_"
         app:srcCompat="@drawable/die" />
@@ -231,10 +216,10 @@
         android:textAppearance="@style/health"
         app:layout_constraintBottom_toBottomOf="@+id/background_"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.096"
+        app:layout_constraintHorizontal_bias="0.066"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/background_"
-        app:layout_constraintVertical_bias="0.234" />
+        app:layout_constraintVertical_bias="0.163" />
 
     <GridLayout
         android:id="@+id/gridLayout"
@@ -242,12 +227,12 @@
         android:layout_height="113dp"
         android:numColumns="3"
         android:rowCount="1"
-        app:layout_constraintBottom_toBottomOf="@+id/btn_refresh"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintHorizontal_bias="0.6"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/card_jadipa"
-        app:layout_constraintVertical_bias="0.257">
+        app:layout_constraintVertical_bias="0.171">
 
         <androidx.cardview.widget.CardView
             android:layout_width="wrap_content"
@@ -354,17 +339,29 @@
         android:id="@+id/textView6"
         android:layout_width="106dp"
         android:layout_height="14dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
         android:gravity="top"
         android:text="Check This Out!"
         android:textAppearance="@style/pahlawan_co"
+        app:layout_constraintBottom_toBottomOf="@+id/card_jadipa"
+        app:layout_constraintEnd_toEndOf="@+id/card_jadipa"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="@+id/card_jadipa"
+        app:layout_constraintTop_toTopOf="@+id/card_jadipa"
+        app:layout_constraintVertical_bias="0.478" />
+
+    <View
+        android:id="@+id/btn_refresh"
+        android:layout_width="70dp"
+        android:layout_height="75dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/refresh"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.524"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.555" />
+        app:layout_constraintVertical_bias="0.953" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
