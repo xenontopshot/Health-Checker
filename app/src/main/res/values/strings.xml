@@ -8,4 +8,10 @@
     <string name="some_id1">6760</string>
     <string name="some_id2">747</string>
     <string name="some_id3">590</string>
+    <string name="title_activity_get_location">getLocation</string>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string name="hello_world">Hello Square World!</string>
 </resources>

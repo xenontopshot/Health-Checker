@@ -4,16 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/time"
+        android:id="@+id/Date"
         android:layout_width="113dp"
         android:layout_height="15dp"
-        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:gravity="center_vertical"
-        android:text="21 December 2020, 18.30"
         android:textAppearance="@style/april_2020_"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -26,7 +26,7 @@
         android:id="@+id/health_trac"
         android:layout_width="129dp"
         android:layout_height="17dp"
-        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:gravity="center_vertical"
         android:text="Health Checker List"
@@ -48,7 +48,7 @@
         app:layout_constraintBottom_toTopOf="@+id/bottom_navb"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5"
+        app:layout_constraintTop_toBottomOf="@+id/Healed"
         app:layout_constraintVertical_bias="0.0" />
 
     <View
@@ -66,7 +66,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/latest_upda"
+        android:id="@+id/latest_update"
         android:layout_width="97dp"
         android:layout_height="17dp"
         android:layout_alignParentLeft="true"
@@ -95,16 +95,17 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.976" />
 
-    <ImageView
+    <TextView
         android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="327dp"
+        android:layout_height="38dp"
+        android:background="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.246"
+        app:layout_constraintHorizontal_bias="0.273"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.084"
+        app:layout_constraintVertical_bias="0.08"
         app:srcCompat="@drawable/kotak" />
 
     <ImageView
@@ -139,24 +140,24 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="56dp"
         android:layout_marginEnd="4dp"
-        app:layout_constraintEnd_toStartOf="@+id/imageView5"
+        app:layout_constraintEnd_toStartOf="@+id/Healed"
         app:layout_constraintHorizontal_bias="0.473"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/background_"
         app:srcCompat="@drawable/kasus" />
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/Healed"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="56dp"
         android:layout_marginEnd="24dp"
-        app:layout_constraintEnd_toStartOf="@+id/imageView6"
+        app:layout_constraintEnd_toStartOf="@+id/Dead"
         app:layout_constraintTop_toBottomOf="@+id/background_"
         app:srcCompat="@drawable/healed" />
 
     <ImageView
-        android:id="@+id/imageView6"
+        android:id="@+id/Dead"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="56dp"
@@ -166,7 +167,7 @@
         app:srcCompat="@drawable/die" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/totalCase"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="top"
@@ -180,31 +181,31 @@
         app:layout_constraintVertical_bias="0.626" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/totalHealed"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="top"
         android:text="9999"
         android:textAppearance="@style/some_id2"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView5"
-        app:layout_constraintEnd_toEndOf="@+id/imageView5"
+        app:layout_constraintBottom_toBottomOf="@+id/Healed"
+        app:layout_constraintEnd_toEndOf="@+id/Healed"
         app:layout_constraintHorizontal_bias="0.483"
-        app:layout_constraintStart_toStartOf="@+id/imageView5"
-        app:layout_constraintTop_toTopOf="@+id/imageView5"
+        app:layout_constraintStart_toStartOf="@+id/Healed"
+        app:layout_constraintTop_toTopOf="@+id/Healed"
         app:layout_constraintVertical_bias="0.626" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/totalDeath"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="top"
         android:text="9999"
         android:textAppearance="@style/some_id3"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView6"
-        app:layout_constraintEnd_toEndOf="@+id/imageView6"
+        app:layout_constraintBottom_toBottomOf="@+id/Dead"
+        app:layout_constraintEnd_toEndOf="@+id/Dead"
         app:layout_constraintHorizontal_bias="0.483"
-        app:layout_constraintStart_toStartOf="@+id/imageView6"
-        app:layout_constraintTop_toTopOf="@+id/imageView6"
+        app:layout_constraintStart_toStartOf="@+id/Dead"
+        app:layout_constraintTop_toTopOf="@+id/Dead"
         app:layout_constraintVertical_bias="0.626" />
 
     <TextView
@@ -235,6 +236,7 @@
         app:layout_constraintVertical_bias="0.171">
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/hospitalNearby"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_row="0"
@@ -268,6 +270,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/checkSymptoms"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_row="0"
@@ -301,6 +304,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/tracker"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_row="0"
@@ -327,7 +331,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Quarantine \n tracker"
+                    android:text="Quarantine \n Tracker"
                     android:textAlignment="center"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -336,7 +340,7 @@
     </GridLayout>
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/checkThis"
         android:layout_width="106dp"
         android:layout_height="14dp"
         android:gravity="top"
