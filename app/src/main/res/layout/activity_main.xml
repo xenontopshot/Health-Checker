@@ -35,11 +35,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.068"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/card_jadipa"
+        app:layout_constraintTop_toBottomOf="@+id/video"
         app:layout_constraintVertical_bias="0.022" />
 
     <View
-        android:id="@+id/card_jadipa"
+        android:id="@+id/video"
         android:layout_width="357dp"
         android:layout_height="124dp"
         android:layout_alignParentLeft="true"
@@ -60,7 +60,7 @@
         android:background="@drawable/header"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
@@ -100,6 +100,7 @@
         android:layout_width="327dp"
         android:layout_height="38dp"
         android:background="#FFFFFF"
+        android:textAppearance="@style/maps"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.273"
@@ -232,7 +233,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.6"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/card_jadipa"
+        app:layout_constraintTop_toBottomOf="@+id/video"
         app:layout_constraintVertical_bias="0.171">
 
         <androidx.cardview.widget.CardView
@@ -346,11 +347,11 @@
         android:gravity="top"
         android:text="Check This Out!"
         android:textAppearance="@style/pahlawan_co"
-        app:layout_constraintBottom_toBottomOf="@+id/card_jadipa"
-        app:layout_constraintEnd_toEndOf="@+id/card_jadipa"
+        app:layout_constraintBottom_toBottomOf="@+id/video"
+        app:layout_constraintEnd_toEndOf="@+id/video"
         app:layout_constraintHorizontal_bias="0.501"
-        app:layout_constraintStart_toStartOf="@+id/card_jadipa"
-        app:layout_constraintTop_toTopOf="@+id/card_jadipa"
+        app:layout_constraintStart_toStartOf="@+id/video"
+        app:layout_constraintTop_toTopOf="@+id/video"
         app:layout_constraintVertical_bias="0.478" />
 
     <View
@@ -366,6 +367,32 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.953" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="25dp"
+        android:layout_height="21dp"
+        app:layout_constraintBottom_toBottomOf="@+id/background_"
+        app:layout_constraintEnd_toEndOf="@+id/background_"
+        app:layout_constraintHorizontal_bias="0.058"
+        app:layout_constraintStart_toStartOf="@+id/background_"
+        app:layout_constraintTop_toTopOf="@+id/background_"
+        app:layout_constraintVertical_bias="0.571"
+        app:srcCompat="@drawable/maps" />
+
+    <TextView
+        android:id="@+id/address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:text="Set My Location"
+        android:textAppearance="@style/maps"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="@+id/imageView2"
+        app:layout_constraintVertical_bias="0.59" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

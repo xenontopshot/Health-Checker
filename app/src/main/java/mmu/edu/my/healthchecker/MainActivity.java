@@ -4,11 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
-import android.net.Uri;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
-import android.os.HandlerThread;
 import android.os.Looper;
 import android.util.Log;
 import android.view.View;
@@ -32,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
     TextView tcase;
     TextView thealed;
     TextView tdead;
-    TextView youtube;
+    View youtube;
     TextView addressView;
     TextView dateToday;
     GridLayout mainGrid;
@@ -54,8 +51,8 @@ public class MainActivity extends AppCompatActivity {
         symptoms = findViewById(R.id.checkSymptoms);
         dateToday = findViewById(R.id.Date);
         tracker = findViewById(R.id.tracker);
-        youtube = findViewById(R.id.checkThis);
-        addressView = findViewById(R.id.imageView2);
+        youtube = findViewById(R.id.video);
+        addressView = findViewById(R.id.address);
         mainGrid = (GridLayout) findViewById(R.id.gridLayout);
 
         GetTotal p = new GetTotal();
@@ -74,24 +71,21 @@ public class MainActivity extends AppCompatActivity {
         hospital.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.google.com/search?q=hospital%20near%20me"));
-                startActivity(browserIntent);
+                startActivity(new Intent(MainActivity.this, hospital.class));
             }
         });
 
         symptoms.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://forms.gle/gC65xupS4qWma6YD9"));
-                startActivity(browserIntent);
+                startActivity(new Intent(MainActivity.this, symptomp.class));
             }
         });
 
         youtube.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://youtube.com/playlist?list=PL5Jn1YJ9y525Ep0wK_Q2VIQba_ruS-bCy"));
-                startActivity(browserIntent);
+                startActivity(new Intent(MainActivity.this, video.class));
             }
         });
 
