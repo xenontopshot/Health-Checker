@@ -4,36 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#0288D1"
+    android:background="@drawable/cover"
     tools:context=".tracker">
 
     <fragment
         android:id="@+id/maps"
         android:name="com.google.android.gms.maps.SupportMapFragment"
-        android:layout_width="377dp"
-        android:layout_height="657dp"
+        android:layout_width="0dp"
+        android:layout_height="600dp"
         android:layout_marginStart="14dp"
-        android:layout_marginTop="14dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="14dp"
-        android:layout_marginBottom="14dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.4"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewUserLoc"
-        app:layout_constraintVertical_bias="0.016" />
-
-    <TextView
-        android:id="@+id/textViewUserLoc1"
-        android:layout_width="404dp"
-        android:layout_height="37dp"
-        android:background="#FFFFFF"
-        android:textAlignment="inherit"
-        android:textAllCaps="false"
-        android:textAppearance="@style/maps"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
@@ -43,26 +27,29 @@
         android:layout_width="103dp"
         android:layout_height="50dp"
         android:text="Set Location"
-        android:textSize="10sp"
         android:textAppearance="@style/maps"
+        android:textSize="10sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/maps"
-        app:layout_constraintVertical_bias="0.515" />
+        app:layout_constraintVertical_bias="0.243" />
 
     <TextView
         android:id="@+id/textViewUserLoc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="8dp"
         android:text="Set Your Current Place"
         android:textAppearance="@style/maps"
-        app:layout_constraintBottom_toBottomOf="@+id/textViewUserLoc1"
+        app:layout_constraintBottom_toTopOf="@+id/maps"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textViewUserLoc1"
-        app:layout_constraintVertical_bias="0.388" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
