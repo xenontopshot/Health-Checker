@@ -11,13 +11,11 @@ import android.content.pm.PackageManager;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
-import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
@@ -27,8 +25,12 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
 import com.karumi.dexter.Dexter;
 import com.karumi.dexter.PermissionToken;
 import com.karumi.dexter.listener.PermissionDeniedResponse;
@@ -37,20 +39,24 @@ import com.karumi.dexter.listener.PermissionRequest;
 import com.karumi.dexter.listener.single.PermissionListener;
 
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
+import java.util.Map;
+import java.util.Objects;
 
 public class tracker extends AppCompatActivity {
 
     private FusedLocationProviderClient client;
-    private FusedLocationProviderClient fsf;
     private SupportMapFragment mapFragment;
+    FirebaseFirestore fstore;
+    FirebaseAuth fAuth;
     TextView userLocation;
     Button setAddress;
-    public String address;
+    String UserID;
+    public String address = null;
     private int REQUEST_CODE = 101;
-    public double Latitude;
-    public double longitude;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,16 +69,29 @@ public class tracker extends AppCompatActivity {
         actionBar.setDisplayShowHomeEnabled(true);
         actionBar.setDisplayHomeAsUpEnabled(true);
 
+        fstore = FirebaseFirestore.getInstance();
+        fAuth = FirebaseAuth.getInstance();
         mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.maps);
         client = LocationServices.getFusedLocationProviderClient(tracker.this);
         userLocation = findViewById(R.id.textViewUserLoc);
         setAddress = findViewById(R.id.setViewUserLoc);
 
+
+
         setAddress.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                UserID = Objects.requireNonNull(fAuth.getCurrentUser()).getUid();
+                DocumentReference documentReference = fstore.collection("users").document(UserID);
+                Map<String,Object> user  = new HashMap<>();
+                user.put("Quarantine Location", address);
+                documentReference.set(user).addOnSuccessListener(aVoid -> {Log.d("Onsucces","saved");}).addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Log.d("onSuccess",e.toString());
+                    }
+                });
                 Intent mainIntent = new Intent(getBaseContext(), MainActivity.class);
-                mainIntent.putExtra("address", address);
                 startActivity(mainIntent);
             }
         });
@@ -121,7 +140,9 @@ public class tracker extends AppCompatActivity {
                         Log.d("locat","Waiting for Location");
                     }
                     else {
-                        String address = (addresses.get(0).getFeatureName() + ", " + addresses.get(0).getLocality() +", " + addresses.get(0).getAdminArea() + ", " + addresses.get(0).getCountryName());
+                        //String address = (addresses.get(0).getFeatureName() + ", " + addresses.get(0).getLocality() +", " + addresses.get(0).getAdminArea() + ", " + addresses.get(0).getCountryName());
+                        String address1 = addresses.get(0).getAddressLine(0);
+                        Log.d("locati12",address1);
                     }
                 } catch (IOException e) {
                     e.printStackTrace();
@@ -142,8 +163,9 @@ public class tracker extends AppCompatActivity {
                             Log.d("locat","Waiting for Location");
                         }
                         else {
-                            address = (addresses.get(0).getFeatureName() + ", " + addresses.get(0).getLocality() +", " + addresses.get(0).getAdminArea() + ", " + addresses.get(0).getCountryName());
+                            address = addresses.get(0).getAddressLine(0);
                             userLocation.setText(address);
+                            Log.d("locati13",address);
                         }
                         } catch (IOException e) {
                             e.printStackTrace();
@@ -153,9 +175,6 @@ public class tracker extends AppCompatActivity {
             }
         });
     }
-
-
-
 
 
 }
