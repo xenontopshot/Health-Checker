@@ -48,7 +48,8 @@ public class CheckLocation extends AppCompatActivity implements LocationListener
             Intent i = new Intent(CheckLocation.this, MainActivity.class);
             startActivity(i);
         }else{
-            Log.d("same?:","NNOTsame");
+            Log.d("same?:","NOTsame");
+            Toast.makeText(this, "Location Different", Toast.LENGTH_SHORT).show();
             Intent i = new Intent(CheckLocation.this, MainActivity.class);
             i.putExtra("result", "NOTSAME");
             startActivity(i);
