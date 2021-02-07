@@ -61,7 +61,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        getSupportActionBar().hide();
         tcase = findViewById(R.id.totalCase);
         thealed = findViewById(R.id.totalHealed);
         tdead = findViewById(R.id.totalDeath);
@@ -127,6 +126,8 @@ public class MainActivity extends AppCompatActivity {
 
             AlertDialog alert = builder.create();
             alert.show();
+        }else{
+            Toast.makeText(this, "In quarantine location", Toast.LENGTH_SHORT).show();
         }
 
 
@@ -207,23 +208,18 @@ public class MainActivity extends AppCompatActivity {
             AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
             builder.setTitle("Ramkhumar");
             builder.setMessage("1161102130");
-
             builder.setPositiveButton("yes", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
                     Toast.makeText(getApplicationContext(), "ok", Toast.LENGTH_SHORT).show();
-
                 }
             });
-
             builder.setNegativeButton("no", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
                     Toast.makeText(getApplicationContext(), "ok", Toast.LENGTH_SHORT).show();
-
                 }
             });
-
             AlertDialog alert = builder.create();
             alert.show();
         }*/
