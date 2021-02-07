@@ -108,9 +108,9 @@ public class MainActivity extends AppCompatActivity {
             Log.d("result?:","NOTsame");
             AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
             builder.setTitle("Warning");
-            builder.setMessage("You left Quarantine Area. Please return immediately");
+            builder.setMessage("You will be fine for leaving the quarantine area.");
 
-            builder.setPositiveButton("yes", new DialogInterface.OnClickListener() {
+            builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
                     Toast.makeText(getApplicationContext(), "ok", Toast.LENGTH_SHORT).show();
@@ -118,7 +118,22 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
 
-            builder.setNegativeButton("no", new DialogInterface.OnClickListener() {
+            /*builder.setNegativeButton("no", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    Toast.makeText(getApplicationContext(), "ok", Toast.LENGTH_SHORT).show();
+
+                }
+            });*/
+
+            AlertDialog alert = builder.create();
+            alert.show();
+        }else{
+            AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+            builder.setTitle("Alert");
+            builder.setMessage("You are in quarantine location.");
+
+            builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
                     Toast.makeText(getApplicationContext(), "ok", Toast.LENGTH_SHORT).show();
@@ -128,8 +143,6 @@ public class MainActivity extends AppCompatActivity {
 
             AlertDialog alert = builder.create();
             alert.show();
-        }else{
-
         }
 
 
