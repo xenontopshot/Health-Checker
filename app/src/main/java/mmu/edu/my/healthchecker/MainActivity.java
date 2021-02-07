@@ -129,7 +129,7 @@ public class MainActivity extends AppCompatActivity {
             AlertDialog alert = builder.create();
             alert.show();
         }else{
-            Toast.makeText(this, "In quarantine location", Toast.LENGTH_SHORT).show();
+
         }
 
 

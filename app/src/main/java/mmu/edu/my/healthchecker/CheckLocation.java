@@ -45,6 +45,7 @@ public class CheckLocation extends AppCompatActivity implements LocationListener
         getLocation();
         if(checkAdd.equals(work)){
             Log.d("same?:","same");
+            Toast.makeText(this, "In quarantine location", Toast.LENGTH_SHORT).show();
             Intent i = new Intent(CheckLocation.this, MainActivity.class);
             startActivity(i);
         }else{
