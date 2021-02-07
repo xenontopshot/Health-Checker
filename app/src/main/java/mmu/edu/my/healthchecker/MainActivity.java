@@ -61,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        getSupportActionBar().hide();
         tcase = findViewById(R.id.totalCase);
         thealed = findViewById(R.id.totalHealed);
         tdead = findViewById(R.id.totalDeath);

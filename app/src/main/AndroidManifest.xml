@@ -43,8 +43,7 @@
             android:name=".Login"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
         <activity
-            android:name=".MainActivity"
-            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+            android:name=".MainActivity"/>
         <activity
             android:name=".SignUp"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
